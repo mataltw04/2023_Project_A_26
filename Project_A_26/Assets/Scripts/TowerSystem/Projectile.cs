@@ -15,8 +15,9 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Ememy"&&!hasDamaged)
+        if (other.tag == "Enemy"&&!hasDamaged)
         {
+            other.GetComponent<EnemyHealthController>().TakeDamage((int)damagedAmount); //데미지 계산 추가
             hasDamaged = true;
         }
         Destroy(gameObject);                        //Trigger 충돌이 일어나면 파괴

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8145668561674319228}
   - component: {fileID: 8833098344268906123}
   - component: {fileID: 6651238719785872704}
+  - component: {fileID: -3322983720091236892}
   m_Layer: 6
   m_Name: monster_001
   m_TagString: Untagged
@@ -97,7 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceec4e39ab883e5409f8f2020d4866fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 20
+  speedMod: 1
+  timeSinceStart: 0
 --- !u!136 &6651238719785872704
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -112,3 +115,17 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3322983720091236892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914027852015717828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f93db6444137c408423c97dc5356d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHeath: 20
+  moneyOnDeath: 50
